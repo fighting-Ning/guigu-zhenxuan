@@ -6,8 +6,10 @@
     // Extra safety for array and object lookups, but may have false positives.
     "noUncheckedIndexedAccess": true,
 
+    // 解析非相对模块的基地址，默认是当前目录 但是配置默认了，就不用再显示声明了
     // Path mapping for cleaner imports.
     "paths": {
+      // 路径映射，相当于baseUrl
       "@/*": ["./src/*"]
     },
 

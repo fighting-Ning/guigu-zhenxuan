@@ -1,23 +1,19 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import SvgIcon from '@/components/SvgIcon/SvgIcon.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div>
+    <h1>SVG测试</h1>
+    <!-- 测试SVG图标使用 -->
+    <svg style="width: 30px; height: 30px">
+      <!-- xlink:href执行哪一个图标，属性值必须是#icon-图标名称，因为vite.config.ts就是这么配置的 -->
+      <!-- use图标fill属性可以设置图标的颜色 -->
+      <use xlink:href="#icon-phone" fill="black"></use>
+    </svg>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+    <svg-icon name="home" color="red" height="50px" weight="50px"></svg-icon>
+  </div>
 </template>
 
 <style scoped>

@@ -12,14 +12,23 @@
     "lint": "run-s \"lint:*\"",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "build.test": "vue-tsc && vite build --mode test",
+    "build.pro": "vue-tsc && vite build --mode production",
+    "prepare": "husky install",
+    "commitlint": "commitlint --config commitlint.config.cjs -e -v"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "element-plus": "^2.14.4",
+    "mitt": "^3.0.1",
     "pinia": "^4.0.2",
     "vue": "^3.5.40",
     "vue-router": "^5.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.13.3",
     "@vitejs/plugin-vue": "^6.0.8",
@@ -29,12 +38,15 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "~1.73.0",
     "eslint-plugin-vue": "~10.9.2",
+    "husky": "^8.0.0",
     "jiti": "^2.7.0",
     "npm-run-all2": "^9.0.2",
     "oxlint": "~1.73.0",
     "prettier": "3.9.5",
+    "sass": "^1.102.0",
     "typescript": "~6.0.0",
     "vite": "^8.1.5",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-vue-devtools": "^8.1.5",
     "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.7"
