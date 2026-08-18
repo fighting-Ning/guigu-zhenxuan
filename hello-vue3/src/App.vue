@@ -13,6 +13,8 @@ import SvgIcon from '@/components/SvgIcon/SvgIcon.vue'
     </svg>
 
     <svg-icon name="home" color="red" height="50px" weight="50px"></svg-icon>
+
+    <h1>测试husky是否生效</h1>
   </div>
 </template>
 
